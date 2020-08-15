@@ -8,6 +8,7 @@ class DockerTestProjectApplicationTests {
 
 	@Test
 	fun contextLoads() {
+
 	}
 
 }
