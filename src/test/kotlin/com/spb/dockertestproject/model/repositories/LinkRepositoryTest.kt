@@ -19,6 +19,7 @@ import java.util.*
  * under MIT license
  */
 
+
 @DatabaseSetup(LinkRepositoryTest.DATASET)
 @DatabaseTearDown(type = DatabaseOperation.DELETE_ALL, value = [LinkRepositoryTest.DATASET])
 open class LinkRepositoryTest : AbstractRepositoryTest() {
