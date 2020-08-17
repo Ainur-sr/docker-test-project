@@ -7,6 +7,6 @@ import javax.persistence.*
 data class Link(var text: String = "",
                 @Id
                 @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "links_sequence")
-                @SequenceGenerator(name = "links_sequence", sequenceName = "links_seq")
+                @SequenceGenerator(name = "links_sequence", sequenceName = "links_seq", allocationSize = 1)
                 var id: Long = 0
 )
