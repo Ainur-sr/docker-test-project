@@ -54,11 +54,11 @@ class DefaultKeyMapperServiceTest {
         Mockito.`when`(converter.keyToId(KEY_B)).thenReturn(ID_B)
         Mockito.`when`(converter.idToKey(ID_B)).thenReturn(KEY_B)
 
-        whenever(repo.findOne(Mockito.anyObject())).thenReturn(Optional.empty())
+        whenever(repo.findById(Mockito.anyObject())).thenReturn(Optional.empty())
         whenever(repo.save(Link(LINK_A))).thenReturn(LINK_OBJ_A)
         whenever(repo.save(Link(LINK_B))).thenReturn(LINK_OBJ_B)
-        whenever(repo.findOne(ID_A)).thenReturn(Optional.of(LINK_OBJ_A))
-        whenever(repo.findOne(ID_B)).thenReturn(Optional.of(LINK_OBJ_B))
+        whenever(repo.findById(ID_A)).thenReturn(Optional.of(LINK_OBJ_A))
+        whenever(repo.findById(ID_B)).thenReturn(Optional.of(LINK_OBJ_B))
     }
 
     @Test

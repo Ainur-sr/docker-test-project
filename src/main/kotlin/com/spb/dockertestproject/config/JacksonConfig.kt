@@ -6,6 +6,5 @@ import org.springframework.context.annotation.Configuration
 
 @Configuration
 open class JacksonConfig {
-    @Bean
-    open fun kotlinModule() = KotlinModule()
+    @Bean open fun kotlinModule() = KotlinModule()
 }

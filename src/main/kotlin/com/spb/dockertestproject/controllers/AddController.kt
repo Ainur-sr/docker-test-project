@@ -2,21 +2,19 @@ package com.spb.dockertestproject.controllers
 
 import com.spb.dockertestproject.service.KeyMapperService
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Controller
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestMethod
-import org.springframework.web.bind.annotation.ResponseBody
+import org.springframework.web.bind.annotation.*
+
 
 @Controller
 @RequestMapping("add")
 class AddController {
 
-    @Autowired
-    lateinit var service: KeyMapperService
+    @Autowired lateinit var service: KeyMapperService
 
-    @RequestMapping(method = arrayOf(RequestMethod.POST))
+    @PostMapping(consumes = [MediaType.APPLICATION_JSON_VALUE], produces = [MediaType.APPLICATION_JSON_VALUE])
     @ResponseBody
     fun add(@RequestBody request: AddRequest) =
             ResponseEntity.ok(AddResponse(request.link, service.add(request.link)))
