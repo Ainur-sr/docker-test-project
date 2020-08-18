@@ -1,3 +1,3 @@
-## Микросервис на Kotlin, SpringBoot и Docker
+##Microservice on Kotlin, SpringBoot, and Docker
 
-Микросервис укорачивает длинные ссылки
+The microservice shortens long links
