@@ -12,6 +12,7 @@
     <artifactId>docker-test-project</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>docker-test-project</name>
+    <packaging>jar</packaging>
     <description>Demo project for Spring Boot with Docker and Kotlin</description>
 
     <properties>
