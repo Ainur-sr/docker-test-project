@@ -8,12 +8,11 @@
         <version>2.3.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.spb</groupId>
     <artifactId>docker-test-project</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>docker-test-project</name>
+    <version>0.1</version>
     <packaging>jar</packaging>
-    <description>Demo project for Spring Boot with Docker and Kotlin</description>
 
     <properties>
         <java.version>1.8</java.version>

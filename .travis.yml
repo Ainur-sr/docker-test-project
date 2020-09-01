@@ -21,7 +21,7 @@ script:
 # Create Docker image for our app and push it to Dockerhub repository and send messages to the Teams channel after the `script` job is successfully executed
 after_success:
   - export COMMIT=${TRAVIS_COMMIT::7}
-  - export TAG=`if [ ! -z "$TRAVIS_TAG" ]; then echo "$TRAVIS_TAG"; else echo "$TRAVIS_BRANCH--$COMMIT"; fi`
+  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH; fi`
   - docker login -u $D_USER -p $D_PASS
   - docker-compose build
   - docker tag $HEROKU_APP_NAME:latest $HEROKU_APP_NAME:$TAG
