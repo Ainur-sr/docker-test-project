@@ -3,13 +3,13 @@ jdk: openjdk8
 services:
   - docker
 
-env:
-  global:
-    - COMMIT=${TRAVIS_COMMIT::7}
-    - secure: $HEROKU_APP_NAME
-    - secure: $HEROKU_API_KEY
-    - secure: $D_USER
-    - secure: $D_PASS
+#env:
+#  global:
+#    - COMMIT=${TRAVIS_COMMIT::7}
+#    - secure: $HEROKU_APP_NAME
+#    - secure: $HEROKU_API_KEY
+#    - secure: $D_USER
+#    - secure: $D_PASS
 
 before_install:
   - docker pull openjdk:8-jdk-alpine
