@@ -6,10 +6,10 @@ services:
 env:
   global:
     - COMMIT=${TRAVIS_COMMIT::7}
-    - secure: <encrypted_HEROKU_APP_NAME>
-    - secure: <encrypted_HEROKU_API_KEY>
-    - secure: <encrypted_D_USER>
-    - secure: <encrypted_D_PASS>
+    - secure: $HEROKU_APP_NAME
+    - secure: $HEROKU_API_KEY
+    - secure: $D_USER
+    - secure: $D_PASS
 
 before_install:
   - docker pull openjdk:8-jdk-alpine
