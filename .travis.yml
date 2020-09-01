@@ -15,7 +15,7 @@ services:
 #    - secure: <encrypted_D_PASS>
 
 before_install:
-  - docker pull openjdk: 8-jdk-alpine
+  - docker pull openjdk:8-jdk-alpine
 
 script:
   - mvn test
