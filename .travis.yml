@@ -39,7 +39,7 @@ after_success:
   - export NAME=ainshigapov/docker-test-project
   - docker build -t $NAME:$COMMIT .
   - docker tag $NAME:$COMMIT $NAME:$TAG
-  - docker push $NAME
+  - docker push $HEROKU_APP_NAME
 
 after_failure:
   - export TITLE="Travis:$TRAVIS_JOB_ID -- build job is failed"
