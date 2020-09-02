@@ -21,16 +21,6 @@ after_success:
   - docker tag $NAME:$COMMIT $NAME:$TAG
   - docker push $NAME
 
-# Allow Travis to help deploy the app on Heroku
-deploy:
-  provider: heroku
-  api-key:
-    secure: "$HEROKU_API_KEY"
-  app: docker-test-project
-  on:
-    tags: true
-    repo: docker-test-project
-
 notifications:
   email:
     - ainshigapov@gmail.com

@@ -21,6 +21,6 @@ class DefaultKeyConverterService: KeyConverterService {
     }
 
     override fun keyToId(key: String) = key
-            .map { c -> charToLong[c]!! }
+            .map { c -> charToLong.getValue(c) }
             .fold(0L, {a,b -> a * chars.size + b})
 }
