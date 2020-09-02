@@ -29,7 +29,7 @@ deploy:
   app: docker-test-project
   on:
     tags: true
-    repo: $NAME
+    repo: docker-test-project
 
 notifications:
   email:
