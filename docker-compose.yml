@@ -1,0 +1,6 @@
+version: "3"
+services:
+  app:
+    build: .
+    image: ainshigapov/docker-test-project:latest
+    container_name: docker-test-project
